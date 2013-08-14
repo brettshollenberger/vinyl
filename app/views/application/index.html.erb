@@ -6,22 +6,12 @@
   </div>
 </div>
 <div class="film" data-type="background" data-speed="10">
+  <div class="row">
+    <div class="span6">
+      <iframe width="540" height="302" src="http://www.youtube.com/embed/TzJAuOJ8iKQ?feature=player_embedded" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="span6">
+      <iframe width="540" height="302" src="http://www.youtube.com/embed/FdDwU2LNoBA?feature=player_embedded" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
 </div>
-
-<script>
-$(function(){
-    $('#twiggy-unit').each(function(){
-        var $bgobj = $(this); // assigning the object
-     
-        $(window).scroll(function() {
-            var yPos = -($window.scrollTop() / $bgobj.data('speed')); 
-             
-            // Put together our final background position
-            var coords = '50% '+ yPos + 'px';
- 
-            // Move the background
-            $bgobj.css({ backgroundPosition: coords });
-        }); 
-    });    
-}); 
-</script>

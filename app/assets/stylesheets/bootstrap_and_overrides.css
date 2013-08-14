@@ -149,3 +149,9 @@ html {
   background-color: #FBFBFB !important;
 }
 
+.film .row:first-child {
+  margin: 20px 80px;
+  float: left;
+}
+
+
