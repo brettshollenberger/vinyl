@@ -1,16 +1,27 @@
-<div class="hero-unit" id="twiggy-unit">
-  <div id="headline-block">
-    <div id="headline">
-      <h3>HI, I'M SEAN,</h3>
-      <h1>
-        EDITOR.<br>
-        FILMMAKER.<br>
-        GRAPHIC DESIGNER.
-      </h1>
-      <div class="btn btn-primary btn-block twig-btn">Hire Me.</div>
-    </div>
-  </div>
+<div class="hero-unit" id="twiggy-unit" data-type="background" data-speed="10">
   <div id="youtube">
+    <p>REEL.</p>
+    <p class="bg-text">REEL.</p>
     <iframe width="540" height="302" src="http://www.youtube.com/embed/6V9a_pc_F24?feature=player_embedded" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
+<div class="film" data-type="background" data-speed="10">
+</div>
+
+<script>
+$(function(){
+    $('#twiggy-unit').each(function(){
+        var $bgobj = $(this); // assigning the object
+     
+        $(window).scroll(function() {
+            var yPos = -($window.scrollTop() / $bgobj.data('speed')); 
+             
+            // Put together our final background position
+            var coords = '50% '+ yPos + 'px';
+ 
+            // Move the background
+            $bgobj.css({ backgroundPosition: coords });
+        }); 
+    });    
+}); 
+</script>

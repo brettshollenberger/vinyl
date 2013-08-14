@@ -16,15 +16,24 @@ html {
   height: 100%;
 }
 
-#header {
+#header, #headline-block {
   margin: 10px auto;
   background-color: #1A1A18;
   display: block;
-  width: 300px;
-  height: 300px;
-  border-radius: 300px;
+  border-radius: 200px;
+}
+
+#header {
   position: relative;
   z-index: 10000;
+  width: 20%;
+}
+
+#headline-block {
+  margin: 200px 0 0 9%;
+  width: 20%;
+  height: 20%;
+  background-color: #FBC012;
 }
 
 #header img {
@@ -37,24 +46,19 @@ html {
 #twiggy-unit {
   margin: -290px auto 0;
   background-color: #1A1A18;
-  background: url("/assets/beach2.jpg");
+  background: url("/assets/beach2.jpg") no-repeat;
   background-size:100%;
   height: 100%;
-}
-
-#headline-block {
-  margin: 300px 0 0 0;
-  background-color: rgba(255, 255, 255, .5);
-  width: 45%;
-  height: 38%;
-  border-radius: 10px;
+  max-height: 100%;
+  min-height: 100%;
 }
 
 #headline {
   color: #1A1A18;
-  padding: 10px;
+  padding: 13% 0 0 0;
   position: relative;
   bottom: 0px;
+  text-align: center;
 }
 
 #headline h3 {
@@ -64,24 +68,40 @@ html {
 #headline h1 {
   margin: -10px 0 0 0;
   font-weight: 800;
-  font-size: 50px;
+  font-size: 40px;
   letter-spacing: 1.5px;
 }
 
 #youtube {
-  clear: both;
-  float: right;
-  margin: -315px 0 0 0;
-  background-color: rgba(255, 255, 255, .5);
-  border-radius: 10px;
-  width: 560px;
-  height: 322px;
-  position:relative;
-  z-index: 10001;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  top: 35%;
+}
+
+#youtube p,
+.bg-text {
+  line-height: 5rem;
+  font-size: 8rem;
+  font-weight: 800;
+  display: block;
+  position: relative;
+}
+
+#youtube p {
+  color: #FBC012 !important;
+  z-index: 1000;
+}
+
+#youtube .bg-text {
+  color: #1A1A18 !important;
+  top: -5.3rem;
+  left: .3rem;
+  z-index: 1;
 }
 
 #youtube iframe {
-  margin: 10px 0 0 10px;
+  margin: -5% 0 0 0;
 }
 
 .navbar-inner {
@@ -117,6 +137,15 @@ html {
 }
 
 .twig-btn:hover {
-  background-color: #FB5354 !important;
+  background-color: #FBC012 !important;
+}
+
+.film {
+  position: relative;
+  z-index: 200000;
+  top: -6%;
+  width: 100%;
+  height: 50%;
+  background-color: #FBFBFB !important;
 }
 
