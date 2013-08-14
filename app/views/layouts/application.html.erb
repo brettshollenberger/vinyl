@@ -5,8 +5,35 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,300' rel='stylesheet' type='text/css'>
 </head>
 <body>
+  <div id="header">
+    <img src="/assets/twiglogo.svg">
+  </div>
+  <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+          <div class="container">
+              <ul class="nav">
+                  <li>
+                      <%= link_to "FILM", root_path %>
+                  </li>
+                  <li>
+                      <%= link_to "MUSIC VIDEOS", "/#skills" %>
+                  </li>
+                  <li>
+                      <%= link_to "PORTRAITS", "/#experience" %>
+                  </li>
+                  <li>
+                      <%= link_to "PHOTO", "/#about" %>
+                  </li>
+                  <li>
+                      <%= link_to "ABOUT", "/#about" %>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </div>  
 
 <%= yield %>
 
