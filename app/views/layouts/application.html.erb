@@ -30,6 +30,11 @@
                   <li>
                       <%= link_to "ABOUT", "/#about" %>
                   </li>
+                <% if current_user %>
+                  <li>
+                      <%= link_to "LOGOUT", "/logout", :class => "floatright" %>
+                  </li>
+                <% end %>
               </ul>
           </div>
       </div>

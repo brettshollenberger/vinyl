@@ -12,12 +12,21 @@
   <div id="wave"><img src="/assets/wave_light.png"></div>
 </div>
 <div class="film" data-type="background" data-speed="10">
+  <% if current_user.admin? %>
+    <%= link_to "Add Video", new_videos_path, :class => "btn twig-btn-inverse" %>
+  <% end %>
   <div class="row">
-    <div class="span6">
-      <iframe width="540" height="302" src="http://www.youtube.com/embed/TzJAuOJ8iKQ?feature=player_embedded" frameborder="0" allowfullscreen></iframe>
+    <% @videos.each do |video| %>
+      <div class="span6">
+        <h2><%= video.name %></h2>
+        <%= raw "#{video.embed_code}" %>
+      </div>
+    <% end %>
+    
+     <!--  <iframe width="540" height="302" src="http://www.youtube.com/embed/TzJAuOJ8iKQ?feature=player_embedded" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="span6">
       <iframe width="540" height="302" src="http://www.youtube.com/embed/FdDwU2LNoBA?feature=player_embedded" frameborder="0" allowfullscreen></iframe>
-    </div>
+    </div> -->
   </div>
 </div>
